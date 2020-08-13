@@ -3,21 +3,22 @@
 
 .btn {
   &-primary, &-outline {
-    background: $defaultText;
+    background: $redColor;
     color: $whiteColor;
-    border: 2px solid $defaultText;
+    border: 2px solid $redColor;
     font-size: 16px;
     line-height: 24px;
     padding: 9px 24px;
     @include transition(.3);
+    cursor: pointer;
     &:hover {
-      color: $defaultText;
+      color: $redColor;
       background: $whiteColor;
     }
   }
   &-outline {
     background: $whiteColor;
-    color: $defaultText;
+    color: $redColor;
   }
   &-link {
     position: relative;
