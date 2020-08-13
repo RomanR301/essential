@@ -57,6 +57,15 @@
   max-width: $size;
 }
 
+@mixin underline($width, $height) {
+  content: '';
+  position: absolute;
+  background: $redColor;
+  right: 0;
+  width: $width;
+  height: $height;
+}
+
 @mixin fontSize($minSize, $maxSize) {
   font-size: $maxSize + 0px;
   font-size: -webkit-calc(#{$minSize + 0px} + (#{$maxSize} - #{$minSize}) * ((100vw - 300px) / (1900 - 300)));
