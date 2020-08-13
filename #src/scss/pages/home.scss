@@ -1,0 +1,209 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+// * {
+//   outline: 1px solid red;
+// }
+.home {
+  section {
+    margin-bottom: 100px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 40px;
+    }
+  }
+  & .banner {
+    margin-bottom: 0;
+  }
+}
+// MAIN SCREEN
+.swiper-banner {
+  height: 100%;
+}
+
+.banner {
+  height: calc(100vh - 79px);
+  @media (max-width: $breakpoint-xl) {
+    height: auto;
+  }
+  & .swiper-button-next, .swiper-button-prev {
+    color: #333;
+    width: 62px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    @media (max-width: $breakpoint-md) {
+      width: 40px;
+      height: 28px
+    }
+  }
+  & .swiper-button-next:after, .swiper-button-prev:after {
+    font-family: 'icomoon';
+    content: "\e900";
+    @media (max-width: $breakpoint-md) {
+      font-size: 22px;
+    }
+  }
+  & .swiper-button-next:after {
+    transform: rotate(-180deg);
+  }
+  & .swiper-pagination-bullet {
+    opacity: 1;
+    background: $whiteColor;
+  }
+  & .swiper-pagination-bullets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & .swiper-pagination-bullet-active {
+    width: 16px;
+    height: 16px;
+    background: #333;
+    border: 2px solid #fff;
+  }
+}
+
+.home-cat {
+  & .row {
+    margin: 0;
+  }
+  & .home-cat__container {
+    padding: 1.5px;
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+    &:nth-child(3) {
+      padding-right: 0;
+    }
+    &:nth-child(4) {
+      padding-left: 0;
+    }
+    &:nth-child(5) {
+      padding-right: 0;
+    }
+  }
+  &__item {
+    height: 100%;
+    position: relative;
+    & a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      & .home-cat__title {
+        height: 100%;
+      }
+    }
+  }
+  &__title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    color: $whiteColor;
+    z-index: 2;
+    @include fontSize(15, 24);
+    line-height: 23px;
+    transition: all .3s ease-in-out;
+    @media (max-width: $breakpoint-md) {
+      height: 50px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+}
+
+.subscribe {
+  &-content {
+    padding: 90px 0 70px 60px;
+    background: #F6E6D9;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & .row {
+      @media (max-width: $breakpoint-md) {
+        flex-direction: column-reverse;
+      }
+    }
+    &__heading{
+      max-width: 425px;
+      position: relative;
+      &:before {
+        content: '';
+        background: url('../../img/circles.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        width: 72px;
+        height: 72px;
+        left: -30px;
+        top: -30px;
+      }
+    }
+    &:before {
+      content: '';
+      background: #f1c19d;
+      width: 350px;
+      height: 350px;
+      position: absolute;
+      right: -120px;
+      top: -120px;
+      border-radius: 100%;
+      z-index: -1;
+    }
+  }
+  &-form {
+    position: relative;
+    width: 270px;
+    & input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #333333;
+      outline: none;
+      width: 100%;
+      padding: 5px 0;
+      &::placeholder {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: $defaultText;
+        opacity: 1;
+      }
+      &:-ms-input-placeholder { 
+       color: $defaultText;
+      }
+      &::-ms-input-placeholder {
+       color: $defaultText;
+      }
+    }
+    & button {
+      outline: none;
+      position: absolute;
+      right: 0;
+      background: transparent;
+      border: none;
+      & i {
+        font-size: 18px;
+      }
+    }
+
+  }
+}
+
