@@ -28,15 +28,15 @@
       margin-right: 4px;
     }
     & .badge-new {
-      background: $redColor;
+      // background: $redColor;
     }
     & .badge-discount {
-      background: $greenColor;
+      // background: $greenColor;
     }
   }
 
   &__info {
-    background: $lightGreyColor;
+    // background: $lightGreyColor;
     height: auto;
     &_title {
       padding: 16px 8px;
@@ -89,10 +89,10 @@
       }
       & ins > span {
         background: $defaultText;
-        color: $yellowColor;
+        // color: $yellowColor;
       }
       & del > span {
-        color: $heavyGreyColor;
+        // color: $heavyGreyColor;
         font-size: 16px;
         line-height: 15px;
       }

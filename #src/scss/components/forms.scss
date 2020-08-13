@@ -91,7 +91,7 @@
     pointer-events: none;
     & span {
       transition: all .3s cubic-bezier(1, -0.02, 0, 0.99);
-      color: $redColor;
+      // color: $redColor;
       margin-left: 5px;
     }
     @media (max-width: $breakpoint-md) {
@@ -154,7 +154,7 @@
     margin: 0 0 16px 20px;
     font-size: 16px;
     line-height: 24px;
-    color: $heavyGreyColor;
+    // color: $heavyGreyColor;
     & span {
       color: $defaultText;
       font-weight: 700;

@@ -12,7 +12,7 @@
   & .swiper-button-next, .swiper-button-prev {
     position: static;
     margin: 0;
-    border: 2px solid $heavyGreyColor;  
+    // border: 2px solid $heavyGreyColor;  
     width: 36px;
     height: 36px;
     @include transition(.3);
@@ -21,7 +21,7 @@
       font-family: 'icomoon';
       content: "\e901";
       display: block;
-      color: $heavyGreyColor;
+      // color: $heavyGreyColor;
       @include transition(.3);
     }
     &:hover {
