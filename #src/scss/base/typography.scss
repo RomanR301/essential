@@ -9,6 +9,10 @@
   text-align: left;
 }
 
+.--semibold {
+  font-weight: 600;
+}
+
 .--regular {
   font-weight: 400;
 }
@@ -26,22 +30,27 @@
 }
 
 .heading-1 {
-  @include fontSize(40, 88);
+  @include fontSize(40, 110);
   line-height: 1.07;
 }
 
 .heading-2 {
-  @include fontSize(24, 36);
+  @include fontSize(24, 88);
   line-height: 1.33;
 }
 
 .heading-3 {
-  @include fontSize(20, 24);
+  @include fontSize(24, 64);
   line-height: 1.16;
 }
 
 .heading-4 {
-  @include fontSize(16, 18);
+  @include fontSize(16, 36);
+  line-height: 1.33;
+}
+
+.heading-5 {
+  @include fontSize(14, 24);
   line-height: 1.33;
 }
 

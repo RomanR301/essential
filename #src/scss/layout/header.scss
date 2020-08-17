@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 18px;
+  // padding: 18px;
   background: $bodyBackground;
   z-index: 102;
   &-logo {
@@ -20,6 +20,22 @@
     & img {
       display: block;
       width: 100%;
+    }
+  }
+  
+  & .row {
+    padding: 18px;
+    padding-right: 120px;
+  }
+  &-callback {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    & .btn {
+      height: 100%;
+      width: 220px;
+      font-size: 18px;
     }
   }
 }
@@ -65,6 +81,8 @@
     }
   }
 }
+
+
 // .header {
 //   background: #ffffff;
 //   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.06);

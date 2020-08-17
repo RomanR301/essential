@@ -1,9 +1,12 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.home section {
+  margin-bottom: 136px;
+}
+
 .hero-screen {
   height: calc(100vh - 80px);
-  margin-bottom: 50px;
   &__logo {
     width: 360px;
     @media (min-width: 1600px) {
@@ -60,11 +63,6 @@
 }
 
 .home-about {
-  
-  // position: relative;
-  &__image {
-
-  }
   &__text {
     color: $whiteColor;
     position: relative;
@@ -103,7 +101,7 @@
     & p {
       margin-bottom: 24px;
       @media (min-width: 1600px) {
-        font-size: 20px;
+        font-size: 218x;
       }
       @media (min-width: 1800px) {
         font-size: 22px;
@@ -115,6 +113,7 @@
 .services {
   &.home-services {
     margin-top: 300px;
+    // margin-bottom: 100px;
   }
 }
 
@@ -192,4 +191,24 @@
       }
     }
   }
+}
+
+.team {
+  // &-link {
+  //   color: $redColor;
+  //   font-size: 24px;
+  //   line-height: 36px;
+  //   position: relative;
+  //   display: flex;
+  //   align-items: center;
+  //   margin-left: 40px;
+  //   &:before {
+  //     content: '';
+  //     background: #d24a43;
+  //     width: 40px;
+  //     height: 2px;
+  //     margin-right: 10px;
+  //     display: block;
+  //   }
+  // }
 }

@@ -12,8 +12,8 @@
     @include transition(.3);
     cursor: pointer;
     &:hover {
-      color: $redColor;
-      background: $whiteColor;
+      // color: $redColor;
+      background: transparent;
     }
   }
   &-outline {

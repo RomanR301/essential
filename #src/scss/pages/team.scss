@@ -1,0 +1,43 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.team {
+  &-item {
+    position: relative;
+    overflow: hidden;
+    &__content {
+      position: absolute;
+      width: 100%;
+      padding: 16px;
+      bottom: 0;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      &_wrapper {
+        @include transition(.3);
+      }
+    }
+    &__image {
+      filter: saturate(0%);
+      @include transition(.3);
+    }
+
+    &__name {
+
+    }
+    &__position {
+      color: $redColor;
+      @include fontSize(16, 20);
+      line-height: 1.1;
+      padding-bottom: 8px;
+    }
+    &__activity {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &:hover {
+      & .team-item__image {
+        filter: unset;
+      }
+    }
+  }
+}
