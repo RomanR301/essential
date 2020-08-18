@@ -3,15 +3,21 @@
 
 // CARD ITEM
 
-.heading-link {
+
+.arrow-link {
   color: $redColor;
-  font-size: 24px;
-  line-height: 36px;
   position: relative;
   display: flex;
   align-items: center;
-  margin-left: 40px;
   padding-left: 40px;
+  margin-left: 0px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  &.heading-link {
+    margin-left: 40px;
+    padding-left: 40px;
+  }
   &:before, &:after {
     content: '';
     position: absolute;
@@ -24,40 +30,19 @@
     display: block;
     @include transition(.3);
   }
-  &:after {
-    transition-delay: .2s;
-  }
   &:hover {
     &:before {
-      left: 106%;
+      left: 110%;
+      transform: rotate(45deg);
+      width: 20px;
+      top: calc(50% - 7.5px);
+
     }
     &:after {
-      left: 106%;
+      left: 110%;
+      transform: rotate(-45deg);
+      width: 20px;
+      top: calc(50% - -5.5px);
     }
   }
-}
-
-.news {
-  .heading-link {
-
-    &:after {
-      transition-delay: unset;
-    }
-    &:hover {
-      &:before {
-        left: 110%;
-        transform: rotate(45deg);
-        width: 20px;
-        top: calc(50% - 7.5px);
-
-      }
-      &:after {
-        left: 110%;
-        transform: rotate(-45deg);
-        width: 20px;
-        top: calc(50% - -5.5px);
-      }
-    }
-  }
-  
 }

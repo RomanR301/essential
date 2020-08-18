@@ -1,2 +1,76 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+
+.clients-carousel {
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &__item {
+    filter: saturate(0%);
+    @include transition(.3);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: scale(1.5);
+    & img {
+      object-fit: contain;
+    }
+    &:hover {
+      filter: unset;
+    }
+  }
+}
+
+.testimonial {
+  overflow: hidden;
+  &-carousel__nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &-carousel {
+    // position: absolute!important;
+    // right: 0;
+    // left: 0;
+    // width: 130%;
+    & .swiper-slide {
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      height: auto;
+    }
+  }
+  &__item {
+    width: 100%;
+    padding: 28px 30px;
+    background: #3E3E3E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & i {
+      margin-bottom: 20px;
+      font-size: 43px;
+    }
+  }
+  &__content {
+    margin-bottom: 16px;
+    &_text {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+  &__author {
+    &_name {
+      color: $redColor;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+    }
+    &_position {
+      color: #A7A7A7;
+    }
+  }
+}
+

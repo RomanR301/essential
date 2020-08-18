@@ -109,7 +109,6 @@
       @include transition(.3);
       &:hover {
         color: $redColor;
-        font-weight: 700;
       }
     }
     &.current-lang {

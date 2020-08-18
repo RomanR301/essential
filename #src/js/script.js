@@ -110,93 +110,63 @@ jQuery(function () {
   front.init();
   modal.init();
 
-//   var lang = $('.lang');
-//   var selection = $('.header-lang');
-//   var select = selection.find('li');
-
-//   lang.click(function(event) {
-//       if (lang.hasClass('active')) {
-//           lang.removeClass('active');
-//           selection.stop().slideUp(200);
-//       } else {
-//           lang.addClass('active');
-//           selection.stop().slideDown(200);
-//       }
-//       event.preventDefault();
-//   });
-//   if ($('.lang-item-uk').hasClass('current-lang')) {
-//     $('.lang-ua').addClass('selected');
-//     $('.lang-ru').removeClass('selected')
-//   } else if ($('.lang-item-ru').hasClass('current-lang')) {
-//       $('.lang-ua').removeClass('selected');
-//       $('.lang-ru').addClass('selected')
-//   } 
-    var swiper = new Swiper('.swiper-banner', {
-      cssMode: true,
-      spaceBetween: 30,
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      mousewheel: true,
-      keyboard: true,
+    var swiper = new Swiper('.clients-carousel', {
+        slidesPerView: 4,
+        spaceBetween: 120,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+            nextEl: '.clients-next',
+            prevEl: '.clients-prev',
+        },
+        pagination: {
+            el: '.clients-pagination',
+        },
     });
+    var swiperTestimonial = new Swiper('.testimonial-carousel', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.testimonial-next',
+            prevEl: '.testimonial-prev',
+        },
+        pagination: {
+            el: '.testimonial-pagination',
+        },
+    });
+    
+
 
     window.addEventListener("load", function () {
         $(".swiper-container").addClass("loadSlider");
      });
       
 
-    $(".product-carousel").each(function(index, element){
-        var $this = $(this);
-        $this.addClass("instance-" + index);
-        $this.parent().parent().find('.swiper-button-prev').addClass("btn-prev-" + index);
-        $this.parent().parent().find('.swiper-button-next').addClass("btn-next-" + index);
-        var swiperproduct = new Swiper(".instance-" + index, {
-            slidesPerView: 4,
-            spaceBetween: 25,
-            loop: true,
-            navigation: {
-                nextEl: ".btn-next-" + index,
-                prevEl: ".btn-prev-" + index
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
+    // $(".product-carousel").each(function(index, element){
+    //     var $this = $(this);
+    //     $this.addClass("instance-" + index);
+    //     $this.parent().parent().find('.swiper-button-prev').addClass("btn-prev-" + index);
+    //     $this.parent().parent().find('.swiper-button-next').addClass("btn-next-" + index);
+    // var blogslider = new Swiper('.blog-recommendation-carousel', {
+    //     // cssMode: true,
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 0,
+    //     loop: true,
+    //     navigation: {
+    //       nextEl: '.swiper-button-next',
+    //       prevEl: '.swiper-button-prev',
+    //     },
+    //     breakpoints: {
+    //         767: {
+    //             spaceBetween: 24,
 
-                },
-                767: {
-                    slidesPerView: 3,
-                    spaceBetween: 25,
-                },
-                992: {
-                    slidesPerView: 4,
-                },
-              }
-        });
-    });
-        
-    var blogslider = new Swiper('.blog-recommendation-carousel', {
-        // cssMode: true,
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-        loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            767: {
-                spaceBetween: 24,
+    //         },
+    //     }
+    //   });
 
-            },
-        }
-      });
+
       $(document).on('click', '.woof_container_inner h4', function () {
         let item = $(this);
         let list = $(this).next('.woof_block_html_items');

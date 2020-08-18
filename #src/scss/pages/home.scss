@@ -12,7 +12,7 @@
     @media (min-width: 1600px) {
       width: 404px;
     }
-    @media (min-width: 1800px) {
+    @media (min-width: $breakpoint-xxl) {
       width: 460px;
     }
     @media (min-width: 2000px) {
@@ -113,7 +113,6 @@
 .services {
   &.home-services {
     margin-top: 300px;
-    // margin-bottom: 100px;
   }
 }
 
@@ -193,22 +192,54 @@
   }
 }
 
-.team {
-  // &-link {
-  //   color: $redColor;
-  //   font-size: 24px;
-  //   line-height: 36px;
-  //   position: relative;
-  //   display: flex;
-  //   align-items: center;
-  //   margin-left: 40px;
-  //   &:before {
-  //     content: '';
-  //     background: #d24a43;
-  //     width: 40px;
-  //     height: 2px;
-  //     margin-right: 10px;
-  //     display: block;
-  //   }
-  // }
+.contacts-home {
+  & .contacts__map {
+    height: 100%;
+  }
+  & .contacts__heading {
+    position: relative;
+    margin: 20px 0 50px -220px;
+    &:before {
+      width: 120%;
+    }
+  }
+}
+
+.contacts {
+  &__content {
+    padding-bottom: 20px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 36px;
+    & p {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      color: #7E7E7E;
+    }
+    & a, span {
+      font-size: 18px;
+      line-height: 36px;
+      color: #FFFFFF;
+    }
+  }
+  &__socials {
+    & a {
+      display: block;
+      margin-right: 24px;
+      & i {
+        font-size: 24px;
+        &:before {
+          @include transition(.3);
+        }
+      }
+      &:hover {
+        & i:before {
+          color: $redColor;
+        }
+      }
+    }
+  }
 }
