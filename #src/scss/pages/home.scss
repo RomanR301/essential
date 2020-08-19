@@ -3,12 +3,29 @@
 
 .home section {
   margin-bottom: 136px;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 60px;
+  }
 }
 
 .hero-screen {
   height: calc(100vh - 80px);
+  @media (max-width: $breakpoint-md) {
+    height: auto;
+    padding-top: 45px;
+  }
   &__logo {
     width: 360px;
+    @media (max-width: $breakpoint-lg) {
+      width: 300px;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 60%;
+      margin: auto;
+    }
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+    }
     @media (min-width: 1600px) {
       width: 404px;
     }
@@ -19,7 +36,18 @@
       width: 520px;
     }
   }
-  &__heading {
+  &__heading { 
+    @media (max-width: $breakpoint-xl) {
+      margin-left: 120px;
+      margin-top: 83px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      margin-left: 110px;
+      margin-top: 53px;
+    }
+    @media (max-width: $breakpoint-sm) {
+      margin-left: 0;
+    }
     & h1 {
       font-size: 110px;
       line-height: 1;
@@ -27,6 +55,15 @@
       margin-bottom: 54px;
       position: relative;
       display: inline-block;
+      @media (max-width: $breakpoint-xl) {
+        font-size: 70px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        font-size: 60px;
+      }
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 22px;
+      }
       &:before {
         content: "";
         background: $redColor;
@@ -35,9 +72,11 @@
         height: 2px;
         bottom: -25px;
         right: 0;
+        @media (max-width: $breakpoint-md) {
+          bottom: -10px;
+        }
       }
       @media (min-width: 1600px) {
-
         &:before {
           bottom: -28px;
         }
@@ -50,14 +89,19 @@
       }
       @media (min-width: 2000px) {
         font-size: 131px;
-        &:before {
-        }
       }
     }
     & h2 {
       font-size: 36px;
-      line-height: 48px;
+      line-height: 1.3;
       color: $whiteColor;
+      @media (max-width: $breakpoint-lg) {
+        font-size: 24px;
+      }
+      @media (max-width: $breakpoint-md) {
+        padding-left: 34px;
+        font-size: 16px;
+      }
     }
   }
 }
@@ -66,6 +110,9 @@
   &__text {
     color: $whiteColor;
     position: relative;
+    @media (max-width: $breakpoint-md) {
+      margin-top: -80px;
+    }
     &:before {
       position: absolute;
       content: '';
@@ -76,6 +123,16 @@
       top: -30%;
       left: -150px;
       z-index: -2;
+      @media (max-width: $breakpoint-xl) {
+        width: 150%;
+        height: 150%;
+      }
+      @media (max-width: $breakpoint-lg){
+        width: 160%;
+      }
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
     }
     &:after {
       content: '';
@@ -88,7 +145,7 @@
       top: 10%;
     }
     & h2 {
-      font-size: 88px;
+      @include fontSize(24, 88);
       line-height: 1;
       margin: 0 0 52px -120px;
       position: relative;
@@ -96,6 +153,13 @@
       &:before {
         @include underline(125%, 4px);
         bottom: -25px;
+      }
+      @media (max-width: $breakpoint-md) {
+        margin: 0 0 60px 0;
+        &:before {
+          bottom: -10px;
+          width: 145%;
+        }
       }
     }
     & p {
@@ -113,18 +177,34 @@
 .services {
   &.home-services {
     margin-top: 300px;
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 200px;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin-top: 0;
+    }
   }
 }
 
 .tools {
   display: flex;
   flex-wrap: wrap;
+  &-container {
+    @media (max-width: $breakpoint-xl) {
+      justify-content: center;
+    }
+  }
   &-box {
     height: 228px;
     display: block;
     overflow: hidden;
     position: relative;
     width: 25%;
+    @media (max-width: $breakpoint-xl) {
+      margin: 5px;
+      width: 23.7%;
+      border: 2px solid $redColor;
+    }
     &__overlay {
       display: block;
       position: absolute;
@@ -188,6 +268,17 @@
       @media (min-width: 1800px) {
         font-size: 22px;
       }
+    }
+  }
+}
+
+.team {
+  &-pagination {
+    width: 100%;
+    text-align: center;
+    margin: 24px 0;
+    @media (min-width: $breakpoint-lg) {
+      display: none;
     }
   }
 }

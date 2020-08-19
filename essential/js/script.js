@@ -1,6 +1,6 @@
 let front = {
   hamburger: $('.hamburger'),
-  nav: $('.menu-container'),
+  nav: $('.navbar'),
   $body: $('body'),
   init: function () {
       this.events();
@@ -136,6 +136,36 @@ jQuery(function () {
             el: '.testimonial-pagination',
         },
     });
+
+    var swiperTeam = new Swiper('.team-carousel', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        allowTouchMove: false,
+        loop: true,
+        pagination: {
+            el: '.team-pagination',
+        },
+        breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+              allowTouchMove: true,
+
+            },
+            767: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+              allowTouchMove: true,
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+              allowTouchMove: false,
+            },
+        }
+    });
+
+    swiperTeam.mousewheel.disable();
     
 
 

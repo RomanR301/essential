@@ -18,8 +18,8 @@
             <img src="./img/main-logo.svg" alt="Ессеншал">
           </a>
         </div>
-        <div class="col-md-10 d-flex align-right align-middle">
-          <div class="navbar">
+        <div class="col-md-10 d-flex align-right align-middle ">
+          <div class="navbar d-flex align-middle">
             <ul class="primary-menu d-flex">
               <li class="menu-item">
                 <a href="#" class="menu-item__link">Про нас</a>
@@ -37,18 +37,24 @@
                 <a href="#" class="menu-item__link">Контакти</a>
               </li>
             </ul>
+            <ul class="lang d-flex">
+              <li class="lang-item current-lang">
+                <a lang="uk" hreflang="uk" href="#">UA</a>
+              </li>
+              <li class="lang-item">
+                <a lang="ru-RU" hreflang="ru-RU" href="#">RU</a>
+              </li>
+              <li class="lang-item">
+                <a lang="en-EN" hreflang="ru-RU" href="#">EN</a>
+              </li>
+            </ul>
           </div>
-          <ul class="lang d-flex">
-            <li class="lang-item current-lang">
-              <a lang="uk" hreflang="uk" href="#">UA</a>
-            </li>
-            <li class="lang-item">
-              <a lang="ru-RU" hreflang="ru-RU" href="#">RU</a>
-            </li>
-            <li class="lang-item">
-              <a lang="en-EN" hreflang="ru-RU" href="#">EN</a>
-            </li>
-          </ul>
+        </div>
+        <div class="hamburger d-flex align-middle">
+          <p>Меню</p>
+          <p>Закрити</p>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>
@@ -61,12 +67,12 @@
   <section class="hero-screen">
     <div class="container full-height">
       <div class="row d-flex align-middle full-height">
-        <div class="col-md-4 column default-icon">
+        <div class="col-md-4 col-xs-12 column default-icon">
           <div class="hero-screen__logo">
             <img src="./img/logo.svg" alt="Ессеншал логотип">
           </div>
         </div>
-        <div class="col-md-8 column">
+        <div class="col-md-8 col-xs-12 column">
           <div class="hero-screen__heading">
             <h1>Ессеншал</h1>
             <h2>Законні рішення для репутації клієнтів</h2>
@@ -77,7 +83,7 @@
   </section>
   <section class="home-about">
     <div class="container">
-      <div class="row">
+      <div class="row m-row">
         <div class="col-md-6 column">
           <div class="home-about__image default-icon">
             <img src="./img/home-about-us.jpg" alt="">
@@ -105,7 +111,7 @@
       <div class="row">
         <h2 class="heading-1 heading-underlined">Послуги</h2>
       </div>
-      <div class="row">
+      <div class="row tools-container">
         <a href="#" class="tools-box">
           <div class="tools-item">
             <div class="d-flex align-center align-middle full-height">
@@ -284,46 +290,52 @@
         <a class="heading-link arrow-link" href="#">Уся команда</a>
       </div>
       <div class="row team-list">
-        <div class="col-md-4 column">
-          <div class="team-item">
-            <div class="team-item__image default-icon">
-              <img src="./img/lawyer1.png" alt="">
+        <div class="swiper-container team-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="team-item">
+                <div class="team-item__image default-icon">
+                  <img src="./img/lawyer1.png" alt="">
+                </div>
+                <div class="team-item__content">
+                  <div class="team-item__name heading-4 --semibold text-center">Олександр Колючий</div>
+                  <div class="team-item__position --semibold text-center">Головний партнер ESSENTIALS</div>
+                  <div class="team-item__activity">Фінанси, вирішення спорів, банківська справа</div>
+                </div>
+              </div>
             </div>
-            <div class="team-item__content">
-              <div class="team-item__name heading-4 --semibold text-center">Олександр Колючий</div>
-              <div class="team-item__position --semibold text-center">Головний партнер ESSENTIALS</div>
-              <div class="team-item__activity">Фінанси, вирішення спорів, банківська справа</div>
+            <div class="swiper-slide">
+              <div class="team-item">
+                <div class="team-item__image default-icon">
+                  <img src="./img/lawyer2.png" alt="">
+                </div>
+                <div class="team-item__content">
+                  <div class="team-item__content_wrapper">
+                    <div class="team-item__name heading-4 --semibold text-center">Марія Кондратюк</div>
+                    <div class="team-item__position --semibold text-center">Керуючий партнер, адвокат, юрист</div>
+                    <div class="team-item__activity">Фінанси, вирішення спорів, банківська справа</div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 column">
-          <div class="team-item">
-            <div class="team-item__image default-icon">
-              <img src="./img/lawyer2.png" alt="">
-            </div>
-            <div class="team-item__content">
-              <div class="team-item__content_wrapper">
-                <div class="team-item__name heading-4 --semibold text-center">Марія Кондратюк</div>
-                <div class="team-item__position --semibold text-center">Керуючий партнер, адвокат, юрист</div>
-                <div class="team-item__activity">Фінанси, вирішення спорів, банківська справа</div>
+            <div class="swiper-slide">
+              <div class="team-item">
+                <div class="team-item__image default-icon">
+                  <img src="./img/lawyer3.png" alt="">
+                </div>
+                <div class="team-item__content">
+                  <div class="team-item__content_wrapper">
+                    <div class="team-item__name heading-4 --semibold text-center">Олександр Ісаєв</div>
+                    <div class="team-item__position --semibold text-center">Партнер, головний юрист</div>
+                    <div class="team-item__activity">Фінанси, вирішення спорів, банківська справа</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4 column">
-          <div class="team-item">
-            <div class="team-item__image default-icon">
-              <img src="./img/lawyer3.png" alt="">
-            </div>
-            <div class="team-item__content">
-              <div class="team-item__content_wrapper">
-                <div class="team-item__name heading-4 --semibold text-center">Олександр Ісаєв</div>
-                <div class="team-item__position --semibold text-center">Партнер, головний юрист</div>
-                <div class="team-item__activity">Фінанси, вирішення спорів, банківська справа</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="swiper-pagination team-pagination"></div>
+
       </div>
     </div>
   </section>
@@ -668,7 +680,7 @@
       </div>
       <div class="footer-column">
         <p>Соціальні мережі</p> 
-        <div class="footer-list">
+        <div class="footer-list footer-socials">
           <a href="#">
             <i class="icon-instagram"></i>
           </a>

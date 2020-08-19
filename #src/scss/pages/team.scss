@@ -22,17 +22,26 @@
     }
 
     &__name {
-
+      @media (max-width: $breakpoint-lg) {
+        font-size: 24px;
+      }
     }
     &__position {
       color: $redColor;
       @include fontSize(16, 20);
       line-height: 1.1;
       padding-bottom: 8px;
+      @media (max-width: $breakpoint-lg) {
+        font-size: 16px;
+      }
     }
     &__activity {
       font-size: 16px;
       line-height: 24px;
+      @media (max-width: $breakpoint-lg) {
+        font-size: 14px;
+        display: none;
+      }
     }
     &:hover {
       & .team-item__image {

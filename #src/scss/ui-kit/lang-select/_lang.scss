@@ -100,8 +100,21 @@
 
 .lang {
   margin-left: 24px;
+  @media (max-width: $breakpoint-xl) {
+    margin-left: 16px;
+  }
+  @media (max-width: $breakpoint-lg) {
+    margin: 52px 0 0 0;
+    max-width: 300px;
+    width: 100%;
+    justify-content: space-between;
+    
+  }
   &-item {
     margin-left: 16px;
+    @media (max-width: $breakpoint-lg) {
+      margin: 0;
+    }
     & a {
       color: $darkGreyColor;
       @include fontSize(16, 18);
@@ -109,6 +122,11 @@
       @include transition(.3);
       &:hover {
         color: $redColor;
+      }
+      @media (max-width: $breakpoint-lg) {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 48px;
       }
     }
     &.current-lang {

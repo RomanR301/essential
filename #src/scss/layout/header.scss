@@ -2,7 +2,7 @@
 @import "../abstracts/variables";
 
 .body-padding {
-  padding-top: 80px;
+  padding-top: 52px;
 }
 
 .header {
@@ -17,6 +17,10 @@
   &-logo {
     display: flex;
     max-width: 230px;
+    @media (max-width: $breakpoint-lg) {
+      width: 140px;
+      max-width: unset;
+    }
     & img {
       display: block;
       width: 100%;
@@ -26,21 +30,69 @@
   & .row {
     padding: 18px;
     padding-right: 120px;
+    @media (max-width: $breakpoint-xl) {
+      padding-right: 100px;
+    }
+    @media (max-width: $breakpoint-lg) {
+      padding: 12px 0;
+      margin: 0;
+    }
   }
   &-callback {
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
+    @media (max-width: $breakpoint-lg) {
+      height: auto;
+      width: fit-content;
+      top: calc(50% - 18px);
+      right: 15%;
+    }
+    @media (max-width: $breakpoint-md) {
+      right: 80px;
+    }
     & .btn {
       height: 100%;
       width: 220px;
       font-size: 18px;
+      @media (max-width: $breakpoint-xl) {
+        width: 170px;
+        font-size: 16px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        font-size: 14px;
+        width: 115px;
+        padding: 0;
+        height: 36px;
+      }
     }
   }
 }
 
 .navbar {
+  @media (max-width: $breakpoint-lg) {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 52px);
+    top: 52px;
+    right: -120vw;
+    background: #3E3E3E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    &.active {
+      right: 0;
+    }
+  }
+  & .primary-menu {
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   & .menu-item {
     & a {
       font-size: 18px;
@@ -49,6 +101,15 @@
       display: block;
       padding: 12px;
       position: relative;
+      @media (max-width: $breakpoint-xl) {
+        padding: 8px;
+        font-size: 16px;
+      }
+      @media (max-width: $breakpoint-lg) {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 48px;
+      }
       &:before {
         content: '';
         background: transparent;
@@ -62,6 +123,9 @@
         top: calc(50% - 15px);
         z-index: -2;
         @include transition(.3);
+        @media (max-width: $breakpoint-lg) {
+          display: none;
+        }
       }
       &:after {
         content: '';
@@ -72,12 +136,94 @@
         left: 15px;
         top: calc(50% - 12px);
         z-index: -1;
+        @media (max-width: $breakpoint-lg) {
+          display: none;
+        }
       }
       &:hover {
         &:before {
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+.hamburger {
+  position: absolute;
+  right: 0;
+  display: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+  width: 50px;
+  height: 100%;
+  justify-content: flex-end;
+  @media (max-width: $breakpoint-lg) {
+    display: flex;
+  }
+  & p {
+    font-size: 11px;
+    line-height: 11px;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+  & span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    background: $whiteColor;
+    border-radius: 100px;
+    opacity: 1;
+    right: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    &:nth-child(3) {
+      width: 24px;
+      top: 16px;
+    }
+    &:nth-child(4) {
+      width: 16px;
+      top: 20px;
+    }
+  }
+  &.open {
+    p:nth-child(1) {
+      display: none;
+    }
+    p:nth-child(2) {
+      display: block;
+      margin-right: -11px;
+    }
+    span:nth-child(3){
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(30deg);
+      width: 22px;
+      top: 18px;
+      
+    }    
+    span:nth-child(4) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-30deg);
+      width: 22px;
+      top: 18px;
+        
     }
   }
 }

@@ -8,7 +8,9 @@
 .container {
   max-width: 83.333%;
   margin: auto;
-  // padding: 0 15px;
+  @media (max-width: $breakpoint-md) {
+    max-width: 93%;
+  }
 }
 
 .container-fluid {
@@ -87,9 +89,9 @@
 
 .column {
   padding: 0 15px;
-  // @media (max-width: $breakpoint-sm) {
-  //   padding: 0;
-  // }
+  @media (max-width: $breakpoint-sm) {
+    padding: 0;
+  }
 }
 
 .align-self-middle {
