@@ -28,8 +28,9 @@
   }
   
   & .row {
-    padding: 18px;
-    padding-right: 120px;
+    margin: 0;
+    padding: 18px 120px 18px 0;
+    // padding-right: 120px;
     @media (max-width: $breakpoint-xl) {
       padding-right: 100px;
     }

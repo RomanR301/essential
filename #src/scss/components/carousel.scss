@@ -9,7 +9,7 @@
   }
   &__item {
     filter: saturate(0%);
-    @include transition(.3);
+    @include transition(0.3);
     height: 100%;
     display: flex;
     align-items: center;
@@ -45,7 +45,7 @@
   &__item {
     width: 100%;
     padding: 28px 30px;
-    background: #3E3E3E;
+    background: #3e3e3e;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -69,8 +69,30 @@
       line-height: 26px;
     }
     &_position {
-      color: #A7A7A7;
+      color: #a7a7a7;
     }
   }
 }
 
+.clients-carousel__nav,
+.testimonial-carousel__nav {
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+.pagination-mob {
+  display: none;
+  @media (max-width: $breakpoint-md) {
+    display: block;
+    margin-top: 24px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+// .clients-prev, .clients-next, .testimonial-prev, .testimonial-next {
+//   @media (max-width: $breakpoint-md) {
+//     display: none;
+//   }
+// }

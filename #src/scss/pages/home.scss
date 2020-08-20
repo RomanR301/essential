@@ -128,7 +128,7 @@
         height: 150%;
       }
       @media (max-width: $breakpoint-lg){
-        width: 160%;
+        width: 150%;
       }
       @media (max-width: $breakpoint-md) {
         display: none;
@@ -143,6 +143,9 @@
       height: 80%;
       left: 20%;
       top: 10%;
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
     }
     & h2 {
       @include fontSize(24, 88);
@@ -193,6 +196,9 @@
     @media (max-width: $breakpoint-xl) {
       justify-content: center;
     }
+    @media (max-width: $breakpoint-md) {
+      margin: 0;
+    }
   }
   &-box {
     height: 228px;
@@ -205,6 +211,12 @@
       width: 23.7%;
       border: 2px solid $redColor;
     }
+    @media (max-width: $breakpoint-lg) {
+      width: 31.6%;
+    }
+    @media (max-width: $breakpoint-md) {
+      width: 47%;
+    } 
     &__overlay {
       display: block;
       position: absolute;
@@ -268,6 +280,11 @@
       @media (min-width: 1800px) {
         font-size: 22px;
       }
+      @media (max-width: $breakpoint-lg) {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px;
+      }
     }
   }
 }
@@ -286,12 +303,23 @@
 .contacts-home {
   & .contacts__map {
     height: 100%;
+    @media (max-width: $breakpoint-md) {
+      height: 360px;
+    }
+  }
+  & .contacts__content {
+    @media (max-width: $breakpoint-md) {
+      margin-top: -90px;
+    }
   }
   & .contacts__heading {
     position: relative;
     margin: 20px 0 50px -220px;
     &:before {
       width: 120%;
+    }
+    @media (max-width: $breakpoint-md) {
+      margin: 0 0 80px 0;
     }
   }
 }

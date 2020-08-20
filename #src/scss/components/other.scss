@@ -46,3 +46,17 @@
     }
   }
 }
+
+.heading-underlined-container {
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    & .heading-underlined {
+      margin-bottom: 40px;
+    }
+    & .heading-link {
+      margin-left: 0;
+    }
+  }
+}

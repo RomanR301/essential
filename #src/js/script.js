@@ -111,9 +111,9 @@ jQuery(function () {
   modal.init();
 
     var swiper = new Swiper('.clients-carousel', {
-        slidesPerView: 4,
-        spaceBetween: 120,
-        slidesPerGroup: 4,
+        // slidesPerView: 4,
+        // spaceBetween: 120,
+        // slidesPerGroup: 4,
         loop: true,
         loopFillGroupWithBlank: true,
         navigation: {
@@ -123,6 +123,23 @@ jQuery(function () {
         pagination: {
             el: '.clients-pagination',
         },
+        breakpoints: {
+            320: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            slidesPerGroup: 2,
+            },
+            767: {
+              slidesPerView: 3,
+              slidesPerGroup: 3,
+              spaceBetween: 80,
+            },
+            992: {
+              slidesPerView: 4,
+              slidesPerGroup: 4,
+              spaceBetween: 120,
+            },
+        }
     });
     var swiperTestimonial = new Swiper('.testimonial-carousel', {
         slidesPerView: 3,
@@ -135,6 +152,16 @@ jQuery(function () {
         pagination: {
             el: '.testimonial-pagination',
         },
+        breakpoints: {
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoHeight: true,
+            },
+            767: {
+              slidesPerView: 2,
+            },
+        }
     });
 
     var swiperTeam = new Swiper('.team-carousel', {
