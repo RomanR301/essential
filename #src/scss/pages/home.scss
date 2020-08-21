@@ -1,7 +1,7 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.home section {
+section {
   margin-bottom: 136px;
   @media (max-width: $breakpoint-lg) {
     margin-bottom: 60px;

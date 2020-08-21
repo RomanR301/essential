@@ -2,6 +2,10 @@
 @import "../abstracts/variables";
 
 .entry-content {
+  & p {
+    @include fontSize(18, 22);
+    margin-bottom: 30px;
+  }
   & h1 {
     @include fontSize(24, 36);
     line-height: 1.33;

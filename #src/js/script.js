@@ -98,10 +98,29 @@ let modal = {
           }
       });
 
+      $(document).on('click', '.member-modal', function () {
+          let $this = $(this)
+          let $thisModal = $this.parent().next('.modal');
+          $thisModal.fadeIn();
+          $thisModal.find('.modal__content').removeClass('animate-away').addClass('animate-in');
+          $('body, html').addClass('active');
+          $thisModal.addClass('open');
+    });
+
+
       $(document).on('click', '.modal__close', function () {
           let self = '#' + $(this).closest('.modal').attr('id');
           modal.closeModal(self);
       });
+
+
+      $(document).on('click', '.team-modal-close', function () {
+        let $this = $(this);
+        let $thisModal = $this.parent().parent().parent();
+        $thisModal.find('.modal__content').removeClass('animate-in').addClass('animate-away');
+        $thisModal.fadeOut();
+        $('body, html').removeClass('active');
+    });
   }
 };
 
@@ -160,6 +179,9 @@ jQuery(function () {
             },
             767: {
               slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
             },
         }
     });

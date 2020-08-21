@@ -2,7 +2,10 @@
 @import "../abstracts/variables";
 
 .body-padding {
-  padding-top: 52px;
+  padding-top: 84px;
+  @media (max-width: $breakpoint-lg) {
+    padding-top: 52px;
+  }
 }
 
 .header {

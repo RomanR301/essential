@@ -11,6 +11,8 @@
       padding: 16px;
       bottom: 0;
       text-align: center;
+      @include transition(.3);
+
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
       &_wrapper {
         @include transition(.3);
@@ -48,5 +50,109 @@
         filter: unset;
       }
     }
+  }
+}
+
+.team-single {
+  margin-top: 30px;
+  & .team-item__button {
+    position: absolute;
+    width: 70%;
+    left: calc(50% - 35%);
+    bottom: 20px;
+    opacity: 0;
+    visibility: hidden;
+    outline: none;
+  }
+  & .team-item {
+    margin-bottom: 30px;
+    & .team-item__content {
+      @media (max-width: $breakpoint-lg) {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    & .team-item__button {
+      @media (max-width: $breakpoint-lg) {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &:hover {
+      & .team-item__content {
+        opacity: 0;
+        visibility: hidden;
+      }
+      & .team-item__button {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.team-description {
+  position: absolute;
+  padding: 26px;
+  // width: 150%;
+  background: #3E3E3E;
+  z-index: 12;
+  @media (min-width: $breakpoint-xxl) {
+    padding: 36px;
+  }
+  @media (max-width: $breakpoint-md){
+    padding: 60px 15px;
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1;
+    margin-bottom: 8px;
+    @media (min-width: $breakpoint-xxl) {
+      font-size: 36px
+    }
+  }
+  &__position {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.1;
+    color: $redColor;
+    margin-bottom: 8px;
+    @media (min-width: $breakpoint-xxl) {
+      font-size: 20px;
+    }
+  }
+  &__activity {
+    margin-bottom: 18px;
+    @media (min-width: $breakpoint-xxl) {
+      margin-bottom: 24px;
+    }
+  }
+  & p {
+    font-size: 14px;
+    margin-bottom: 16px;
+    @media (min-width: $breakpoint-xxl) {
+      font-size: 16px;
+    }
+  }
+  &__blog {
+    & p {
+      margin-top: 8px;
+      font-weight: 600;
+      font-size: 16px;  
+      line-height: 24px;
+      color: $redColor;
+    }
+    & a {
+      color: $whiteColor;
+      border-bottom: 1px solid $redColor;
+    }
+  }
+  &__email a {
+    display: block;
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 16px;  
+    color: $redColor;
   }
 }

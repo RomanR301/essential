@@ -40,22 +40,22 @@
   }
 }
 
-.icon-icon-filter {
-  background-image: url('../img/icons/filter.svg');
-  background-repeat: no-repeat;
-  background-position: center; 
-  width: 40px;
-  height: 25px;
-  display: block;
-}
+// .icon-icon-filter {
+//   background-image: url('../img/icons/filter.svg');
+//   background-repeat: no-repeat;
+//   background-position: center; 
+//   width: 40px;
+//   height: 25px;
+//   display: block;
+// }
 
-.btn-filter {
-  display: none;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  margin: 5px 0;
-  @media (max-width: $breakpoint-md) {
-    display: flex;
-  }
-}
+// .btn-filter {
+//   display: none;
+//   width: 100%;
+//   align-items: center;
+//   justify-content: center;
+//   margin: 5px 0;
+//   @media (max-width: $breakpoint-md) {
+//     display: flex;
+//   }
+// }
