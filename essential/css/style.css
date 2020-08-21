@@ -836,7 +836,7 @@ input[type=number] {
   position: relative;
   margin: auto;
   width: 660px;
-  max-height: 600px;
+  max-height: 630px;
   overflow-y: auto;
   height: 100%;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
@@ -864,51 +864,18 @@ input[type=number] {
   background-color: #fff;
 }
 
-.modal__form {
-  margin-bottom: 4vw;
+.modal-callback .modal__content {
+  background: #3E3E3E;
+  padding: 36px;
 }
 
-.modal__title {
-  position: fixed;
-  top: 0;
+.modal__heading {
+  margin-bottom: 40px;
+  font-size: 36px;
 }
 
-.modal__title_heading {
-  font-family: 'RW black', sans-serif;
-  padding-bottom: 0.9vh;
-  text-transform: uppercase;
-  font-size: 4.95495vw;
-  line-height: 5.40541vw;
-  margin-bottom: 3.24324vw;
-}
-
-.modal__title_helper {
-  margin-bottom: 2.34234vw;
-}
-
-.modal__title_email {
-  font-family: 'RW black', sans-serif;
-  padding-bottom: 0.9vh;
-  position: relative;
-  height: 3.15315vw;
-  display: inline-block;
-  text-transform: uppercase;
-}
-
-.modal__title_email:before {
-  content: '';
-  position: absolute;
-  bottom: 1vw;
-  left: 0;
-  width: 100%;
-  height: 0.27027vw;
-  -webkit-transition: all 0.6s cubic-bezier(1, -0.02, 0, 0.99);
-  -o-transition: all 0.6s cubic-bezier(1, -0.02, 0, 0.99);
-  transition: all 0.6s cubic-bezier(1, -0.02, 0, 0.99);
-}
-
-.modal__title_email:hover:before {
-  width: 0;
+.modal__subheading {
+  margin-bottom: 36px;
 }
 
 .section-carousel {
@@ -1242,118 +1209,57 @@ input[type=number] {
 }
 
 .form-control {
-  margin-bottom: 40px;
-  position: relative;
+  height: 54px;
+  margin-bottom: 24px;
 }
 
-.form-control input {
-  height: 36px;
+.form-control.form-textarea {
+  height: 160px;
 }
 
-.form-control textarea {
-  height: 70px;
-  font-family: inherit;
-  font-size: inherit;
-  resize: none;
+.form-control.form-submit {
+  margin: 0;
 }
 
 .form-control input,
 .form-control textarea {
-  width: 100%;
   font-family: inherit;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  border-bottom: 1px solid #c4c4c4;
-  font-weight: 500;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.form-control input.has-content,
-.form-control textarea.has-content {
-  border-color: #333333;
-}
-
-.form-control label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 12px;
-  line-height: 16px;
-  color: #7C7C7C;
-  -webkit-transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  -o-transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  pointer-events: none;
-}
-
-.form-control label span {
-  -webkit-transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  -o-transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99);
-  margin-left: 5px;
-}
-
-.form-control .form-line {
-  position: absolute;
+  font-size: inherit;
+  resize: none;
   width: 100%;
   height: 100%;
-}
-
-.form-control input:focus ~ label,
-.form-control input.has-content ~ label,
-.form-control textarea:focus ~ label,
-.form-control textarea.has-content ~ label {
-  top: -18px;
-  color: #c4c4c4;
-}
-
-.form-control .label-name.active {
-  top: -18px;
-}
-
-.search {
-  min-height: calc(100vh - 180px);
-}
-
-.search .page-heading {
-  margin-bottom: 24px;
-}
-
-.search-form {
-  margin-left: 20px;
-  position: relative;
-  width: 420px;
-}
-
-.search-form:after {
-  position: absolute;
-  font-family: icomoon;
-  content: "\e905";
-  right: 15px;
-  top: calc(50% - 17px);
-  font-size: 20px;
-}
-
-.search-form input {
-  padding: 10px 50px 10px 16px;
-  border: 2px solid #333333;
-  font-size: 16px;
-  width: 100%;
-}
-
-.search-results {
-  margin: 0 0 16px 20px;
+  border: 2px solid #D24A43;
+  background: transparent;
+  color: #ffffff;
   font-size: 16px;
   line-height: 24px;
+  padding: 16px 24px;
 }
 
-.search-results span {
-  color: #333333;
-  font-weight: 700;
-  padding: 0 4px;
+.form-control input::-webkit-input-placeholder, .form-control textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form-control input::-moz-placeholder, .form-control textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+.form-control input:-ms-input-placeholder, .form-control textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form-control input::-ms-input-placeholder, .form-control textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form-control input::placeholder,
+.form-control textarea::placeholder {
+  color: #ffffff;
+}
+
+.form-control input::-moz-placeholder,
+.form-control textarea::-moz-placeholder {
+  color: #ffffff;
 }
 
 .arrow-link {
@@ -3874,60 +3780,8 @@ section {
             flex-direction: column;
   }
 
-  .modal__title {
-    margin-bottom: 40px;
-    position: static;
-  }
-
-  .modal__title_heading {
-    font-size: 45px;
-    line-height: 45px;
-  }
-
-  .modal__title_helper {
-    margin-bottom: 36px;
-  }
-
-  .modal__title_email {
-    font-size: 15px;
-    line-height: 25px;
-    height: auto;
-  }
-
-  .modal__title_email:before {
-    bottom: -1px;
-    height: 3px;
-  }
-
   .lang {
     margin-left: 16px;
-  }
-
-  .form-control {
-    margin-bottom: 34px;
-  }
-
-  .form-control input {
-    height: 50px;
-  }
-
-  .form-control textarea {
-    height: 100px;
-    padding-top: 5px;
-  }
-
-  .form-control input:focus ~ label,
-  .form-control input.has-content ~ label,
-  .form-control textarea:focus ~ label,
-  .form-control textarea.has-content ~ label {
-    font-size: 15px;
-    line-height: 25px;
-  }
-
-  .form-control .label-name.active {
-    top: -20px;
-    font-size: 14px;
-    line-height: 25px;
   }
 
   .header .row {
@@ -3995,14 +3849,6 @@ section {
 
   .modal__content {
     padding: 0;
-  }
-
-  .modal__title_heading {
-    padding-bottom: 0;
-  }
-
-  .modal__title_email {
-    padding-bottom: 0;
   }
 
   .lang {
@@ -4238,6 +4084,15 @@ section {
     padding: 4px 12px;
   }
 
+  .modal-callback .modal__content {
+    padding: 15px;
+  }
+
+  .modal__heading {
+    font-size: 24px;
+    margin-top: 50px;
+  }
+
   .category-carousel-link {
     margin: 10px;
   }
@@ -4275,20 +4130,6 @@ section {
     background: #fff;
     z-index: -1;
     pointer-events: none;
-  }
-
-  .form-control input,
-  .form-control textarea {
-    font-size: 14px;
-  }
-
-  .form-control label {
-    font-size: 14px;
-    line-height: 25px;
-  }
-
-  .search-form {
-    width: 300px;
   }
 
   .heading-underlined-container {
