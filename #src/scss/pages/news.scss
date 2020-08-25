@@ -12,7 +12,6 @@
           transform: rotate(45deg);
           width: 20px;
           top: calc(50% - 7.5px);
-    
         }
         &:after {
           left: 110%;
@@ -29,7 +28,7 @@
   &__image {
     height: 400px;
     filter: saturate(0%);
-    @include transition(.3);
+    @include transition(0.3);
   }
   &__more {
     @media (max-width: $breakpoint-lg) {
@@ -42,25 +41,68 @@
     &_date {
       font-size: 16px;
       line-height: 24px;
-      color: #A7A7A7;
+      color: #a7a7a7;
       @media (max-width: $breakpoint-lg) {
         margin-bottom: 16px;
       }
       .date_year {
         padding-right: 8px;
         margin-right: 8px;
-        border-right: 1px solid #A7A7A7;
+        border-right: 1px solid #a7a7a7;
       }
     }
   }
   &__content {
     padding: 48px;
-    background: #3E3E3E;
+    background: #3e3e3e;
     @media (max-width: $breakpoint-xl) {
       padding: 20px;
     }
   }
   &__title {
     margin-bottom: 24px;
+  }
+}
+
+// NEWS LIST PAGE
+
+.news-list,
+.news-single {
+  margin-top: 30px;
+  & .heading-2 {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 50px;
+    }
+    &:before {
+      width: 160%;
+    }
+  }
+}
+
+
+// Services list page 
+
+.services-list {
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    & li {
+      margin: 0 16px 16px 0;
+      @media (max-width: $breakpoint-sm) {
+        margin: 0 0 20px 0;
+        width: 100%;
+      }
+      & a {
+        color: $whiteColor;
+        display: block;
+        padding: 12px 28px;
+        border: 1px solid $redColor;
+        @include transition(.3);
+        &:hover {
+          background: $redColor;
+        }
+      }
+    }
   }
 }
