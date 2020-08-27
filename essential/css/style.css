@@ -569,6 +569,10 @@ input[type=number] {
   }
 }
 
+.modal-callback .modal__content {
+  width: 650px;
+}
+
 .modal {
   display: none;
   position: fixed;
