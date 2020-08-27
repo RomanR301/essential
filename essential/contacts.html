@@ -10,7 +10,8 @@
 </head>
 
 <body>
-  <header class="header">
+  <!-- ТУТ ІНШИЙ ХЕДЕР (добавився клас header-contacts і забрати body padding) -->
+  <header class="header header-contacts">
     <div class="container m-auto --relative">
       <div class="row align-middle">
         <div class="col-md-2">
@@ -62,24 +63,53 @@
       <button class="btn btn-primary modalTrigger" data-modal="#callback">Напишіть нам</button>
     </div>
   </header>
-  <div class="body-padding"></div>
-<section class="thankyou-page other-page">
-  <div class="other-page-image default-icon">
-    <img src="./img/404.jpg" alt="">
-  </div>
-  <div class="container full-height">
-    <div class="row m-row full-height d-flex align-center align-middle">
-      <div class="col-md-8 col-xs-12 full-height d-flex flex-column align-middle align-center text-center">
-        <img src="./img/thankyou.svg" alt="">
-        <h1>Дякуємо за ваше звернення</h1>
-        <p>Ми зв’яжемось з вами якомога швидше</p>
-        <a href="/" class="btn-primary">На головну</a>
+  <section class="contacts-single">
+    <div class="container-fluid">
+      <div class="map-container">
+        <img src="./img/contacts.jpg" alt="">
+      </div>
+      <div class="map-description">
+        <div class="row m-row full-height">
+          <div class="col-xl-3 col-lg-5 col-xs-12 column contacts__content_container">
+            <div class="contacts__content">
+              <div class="contacts__heading heading-1 heading-underlined">
+                Контакти
+              </div>
+              <div class="contacts__content_inner">
+                <div class="contacts__item">
+                  <p>Адреса</p>
+                  <span>вул. Жиляньска 96, м. Київ</span>
+                </div>
+                <div class="contacts__item">
+                  <p>Контакти</p>
+                  <a href="tel:+380675512416">+38 (067) 551 24 16</a>
+                  <a href="tel:+380675512416">+38 (067) 551 24 16</a>
+                  <a href="tel:+380675512416">+38 (067) 551 24 16</a>
+                </div>
+                <div class="contacts__item">
+                  <p>Графік роботи</p>
+                  <span>Пн-Пт: 09:00 — 18:00</span>
+                  <span>Cб-Нд: Вихідні</span>
+                </div>
+                <div class="contacts__socials d-flex align-middle">
+                  <a href="#">
+                    <i class="icon-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i class="icon-facebook"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
+  <footer class="footer">
   <div class="container">
     <div class="row footer-row">
       <div class="footer-column footer-info">
