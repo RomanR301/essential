@@ -1,6 +1,14 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.header-contacts {
+  & .menu-item__link {
+    &:before {
+      display: none;
+    }
+  }
+}
+
 .contacts-wrapper {
   margin: 0;
   padding-bottom: 60px;

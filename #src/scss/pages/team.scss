@@ -21,6 +21,9 @@
     &__image {
       filter: saturate(0%);
       @include transition(.3);
+      @media (max-width: $breakpoint-lg) {
+        filter: unset;
+      }
     }
 
     &__name {
