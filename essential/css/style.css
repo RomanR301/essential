@@ -1028,6 +1028,14 @@ input[type=number] {
   color: #ffffff;
 }
 
+.wpcf7-not-valid-tip {
+  line-height: 1;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  display: none !important;
+}
+
 .arrow-link {
   color: #D24A43;
   position: relative;
